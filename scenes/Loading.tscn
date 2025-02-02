@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxr70ik5cknjd"]
+
+[ext_resource type="Texture2D" uid="uid://r25d14ih20mp" path="res://art/icon.svg" id="1_acop5"]
+[ext_resource type="Script" path="res://scripts/Loading.gd" id="1_rayal"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_rayal")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.366667
+anchor_top = 0.411111
+anchor_right = 0.633333
+anchor_bottom = 0.588889
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_acop5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.422917
+anchor_top = 0.602778
+anchor_right = 0.579167
+anchor_bottom = 0.634722
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Loading..."
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://r02vqf4ws2hj"]
+
+[ext_resource type="Script" path="res://scripts/Buddy.gd" id="1_0wmr0"]
+[ext_resource type="Texture2D" uid="uid://cr3ea20506xyd" path="res://art/snake_sheet.png" id="1_anso8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reoy6"]
+atlas = ExtResource("1_anso8")
+region = Rect2(1, 1, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6fm8"]
+atlas = ExtResource("1_anso8")
+region = Rect2(34, 1, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i22rl"]
+atlas = ExtResource("1_anso8")
+region = Rect2(67, 1, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1ty1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reoy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6fm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i22rl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="Buddy" type="Area2D"]
+position = Vector2(237, 374)
+script = ExtResource("1_0wmr0")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_m1ty1")
+animation = &"idle"
+frame_progress = 0.163088
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, -75, -20, -55, -25, -55, -25, -50, -35, -50, -35, -45, -45, -45, -45, -40, -55, -40, -55, -35, -60, -35, -60, -30, -65, -30, -65, -25, -70, -25, -70, -15, -75, -15, -75, -5, -80, -5, -80, 10, -70, 20, -70, 25, -80, 35, -80, 50, -65, 65, -55, 70, -40, 75, -20, 80, 25, 80, 55, 70, 75, 50, 80, 40, 80, 25, 70, 15, 60, 10, 50, 0, 30, -20, 20, -25, 0, -25, -20, -20, -35, -15, -10, -40, -5, -50, -5, -70, -10, -75)
