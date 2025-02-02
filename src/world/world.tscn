@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b1bnbyixtjpoy"]
 
-[ext_resource type="PackedScene" uid="uid://r02vqf4ws2hj" path="res://scenes/Buddy.tscn" id="1_64hg1"]
+[ext_resource type="PackedScene" uid="uid://r02vqf4ws2hj" path="res://src/buddy/buddy.tscn" id="1_64hg1"]
 
 [node name="World" type="Node"]
 
